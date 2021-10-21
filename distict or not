@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int i,j,n=5;
+    int array[n];
+    printf("ENTER ARRAY ELEMENTS\n");
+    for(int i=0;i<n;i++){
+        scanf("%d",&array[i]);
+    }
+    for(i=0;i<n;i++){
+        for(j=0;j<n;j++){
+            if((array[i]==array[j])&&(i!=j)){
+                printf("ARRAY NOT DISTINCT\n");
+                return 0;
+            }
+        }
+    }
+    printf("ARRAY IS DISTINCT\n");
+}
